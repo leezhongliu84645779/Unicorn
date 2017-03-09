@@ -1,0 +1,50 @@
+html,
+body {
+	height: 100%;
+}
+
+
+#cover {
+	background: #222 url('../img/index-page-background.jpg') center center no-repeat;
+	background-size: cover;
+	color: white;
+	height: 100%;
+	/*text-align: center;*/
+	/*display: flex;
+	align-items: center;*/
+}
+
+/*.navbar{ 
+    background-image: none;
+}*/
+
+#navbar {
+	background-color: transparent;
+	height: 55px;
+	border: 0;
+	width: 100%;
+	padding-left: 30px;
+	padding-right: 30px;
+	/*display: flex;
+	align-items: center;*/
+}
+
+#home-navbar-item {
+	font-size: 17px;
+	color: white;
+	-webkit-filter: brightness(175%);
+    -moz-filter: brightness(175%); 
+}
+
+#home-navbar-item ul li {
+	margin-left: 30px;
+}
+
+
+#cover-caption{
+	text-align: center;
+	height: calc(100% - 75px);
+	display: flex;
+	align-items: center;
+	width: 100%;
+}
