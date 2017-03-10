@@ -2,7 +2,12 @@ html,
 body {
 	height: 100%;
 }
-
+.carousel-inner > .carousel-item > img {
+    width: 100%;
+    /*height: auto;
+    max-height: 700px;
+    overflow: hidden;*/
+}
 
 #cover {
 	background: #222 url('../img/index-page-background.jpg') center center no-repeat;
@@ -21,19 +26,29 @@ body {
 #navbar {
 	background-color: transparent;
 	height: 55px;
-	border: 0;
+	/*border-left: none;
+	border-right: none;
+	border-top: none;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);*/
+	border: none;
 	width: 100%;
 	padding-left: 30px;
 	padding-right: 30px;
+	border-radius: 0;
 	/*display: flex;
 	align-items: center;*/
 }
 
+/*.navbar-header {
+	border: none!important;
+}*/
+
 #home-navbar-item {
+	border: 0;
 	font-size: 17px;
 	color: white;
-	-webkit-filter: brightness(175%);
-    -moz-filter: brightness(175%); 
+	-webkit-filter: brightness(195%);
+    -moz-filter: brightness(195%); 
 }
 
 #home-navbar-item ul li {
