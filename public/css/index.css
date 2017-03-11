@@ -23,7 +23,7 @@ body {
     background-image: none;
 }*/
 
-#navbar {
+.navbar {
 	background-color: transparent;
 	height: 55px;
 	/*border-left: none;
@@ -35,12 +35,46 @@ body {
 	padding-left: 30px;
 	padding-right: 30px;
 	border-radius: 0;
+	margin-bottom: 0px!important;
 	/*display: flex;
 	align-items: center;*/
 }
 
+#home-page-sub-navbar{
+	position: relative;
+	display: block;
+	height: 55px;
+	width: 100%;
+	background-color: black;
+	opacity: 0.9;
+
+}
+
 /*.navbar-header {
 	border: none!important;
+}*/
+#home-page-sub-navbar > form {
+	position: absolute;
+	margin-top: 11px;
+	margin-left: 70%;
+}
+
+#home-page-sub-navbar > form > input {
+	height: 25px;
+	width: 250px;
+	border-radius: 0.5em 0 0 0.5em;
+	border: 0px;
+}
+
+/*#home-page-sub-navbar > form > span {
+	display: inline-block;
+	margin-left: 0px;
+}
+#home-page-sub-navbar > form > span > button {
+	height: 32px;
+	width: 100px;
+	border: 0px;
+	margin-left: 0;
 }*/
 
 #home-navbar-item {
