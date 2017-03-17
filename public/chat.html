@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<script src="/js/jquery.min.js"></script>
+		<script src = "/socket.io/socket.io.js"></script>
+		<script src="/js/bootstrap.min.js"></script>
+		<script src="/js/bootstrap.js"></script>
+		<link rel="stylesheet" href="/css/bootstrap.min.css">
+	</head>
+	<body>
+		<div class="col-lg-offset-2 col-lg-8" id = "chat">
+			<p><em>This chating is initiated by Zhongliu Li</em></p>
+		</div>
+		<form id = "messageForm">
+			<div class="col-lg-offset-2 col-lg-8">
+	    		<div class="input-group">
+		      		<input type="text" class="form-control" id = "message" placeholder="send message here">
+		      		<span class="input-group-btn">
+		        		<button class="btn btn-secondary" type="submit">Submit</button>
+		      		</span>
+			    </div>
+			</div>
+	    </form>
+	</body>
+	<script>
+		$(function(){
+			var socket = io.connect();
+			var messageForm = $('#messageForm');
+			var message = $('#message');
+			var chat = $('#chat');
+			messageForm.submit(function(e) {
+				e.preventDefault();
+				socket.emit('send message', message.val());
+				message.val('');
+			})
+			socket.on('new message', function(data) {
+				chat.append("<div class = well>" + data.message + "</div>");
+			});
+		});
+	</script>
+
+</html>

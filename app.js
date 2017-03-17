@@ -1,15 +1,14 @@
-// require('./instantHello');
-// var goodbye = require('./talk/goodbye');
-// var talk = require('./talk');
-
-// talk.intro();
-// talk.hello("Lee");
-// goodbye();
 require('./api/data/dbconnection.js').open();
+var connections = [];
 var express = require('express');
 var app = express();
 var path = require('path');
 var routes = require('./api/routes');
+var server = app.listen(3000);
+var socket = require('socket.io');
+var io = require('socket.io').listen(server);
+var connection = require('./api/socket.js')(express, io.sockets);
+
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/js', express.static(__dirname + '/node_modules/jquery/dist')); // redirect JS jQuery
@@ -19,31 +18,3 @@ app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css'));
 app.use('/fonts', express.static(__dirname + '/node_modules/bootstrap/dist/fonts')); // redirect CSS bootstrap
 app.set('port', 3000);
 app.use('/', routes);
-
-// app.get('/', function(req, res) {
-// 	console.log("Get the homwpage");
-// 	res
-// 		.status(200)
-// 		.sendFile(path.join(__dirname, 'public', 'index.html'));
-// });
-
-
-
-// app.get('/json', function(req, res) {
-// 	console.log("Get the json");
-// 	res
-// 		.status(200)
-// 		.json({"josnDate" : true});
-// });
-
-// app.get('/file', function(req, res) {
-// 	console.log("Get the json");
-// 	res
-// 		.status(200)
-// 		.sendFile(path.join(__dirname, 'app.js'));
-// });
-
-var server = app.listen(app.get('port'), function(){
-	var port = server.address().port;
-	console.log('Magic happens on port ' + port);
-});
