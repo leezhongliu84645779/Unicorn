@@ -1,4 +1,4 @@
-require('./api/data/dbconnection.js').open();
+require('./api/data/db.js');
 var connections = [];
 var express = require('express');
 var app = express();

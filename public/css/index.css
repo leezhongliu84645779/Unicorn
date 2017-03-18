@@ -19,9 +19,54 @@ body {
 	align-items: center;*/
 }
 
+#product-introduction {
+	height: 340px;
+	background: #222 url('../img/introduction-background.jpg') center center no-repeat;
+	background-size: cover;
+}
+
+#product-introduction-title {
+	height: 250px;
+	/*display: flex;
+	align-items: center;
+	text-align: center;*/
+}
+
+#whitespace {
+	height: 230px;
+}
+
+footer {
+	background-color: #f1f1f1;
+	min-height: 170px;
+}
+
+footer > h1 {
+	text-align: center;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	font-size: 28px;
+}
+
+footer >ul >li {
+	float: left;
+	margin-left: 40px;
+	margin-top: 40px;
+}
 /*.navbar{ 
     background-image: none;
 }*/
+#product-introduction-title > h1 {
+	margin-top: 15px;
+	text-align: center;
+}
+
+#product-introduction-title > p {
+	margin-top: 20px;
+	margin-left: 35px;
+	margin-right: 35px;
+	font-size: 18px;
+}
 
 .navbar {
 	background-color: transparent;
