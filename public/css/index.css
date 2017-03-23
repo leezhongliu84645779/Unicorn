@@ -9,6 +9,10 @@ body {
     overflow: hidden;*/
 }
 
+#redirect-button {
+	margin-left: 45px;
+}
+
 #cover {
 	background: #222 url('../img/index-page-background.jpg') center center no-repeat;
 	background-size: cover;

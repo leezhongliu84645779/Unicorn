@@ -1,0 +1,39 @@
+html, body{
+	background: #eff2f4!important;
+	height: 100%;
+	width: 100%;
+	/*background-color: #EFF2F4;*/
+}
+
+#sign-up-main-block {
+	margin-top: 60px;
+	border-radius: 0.1em;
+}
+
+#redirect-button {
+	margin-top: 10px;
+	margin-left: 5px;
+}
+
+#sign-up-main-block > h3 {
+	margin-top: 15px;
+	text-align: center;
+}
+
+#sign-up-main-block > form {
+	margin: 15px;
+}
+
+#signup-page-navbar {
+	width: 100%;
+	height: 60px;
+	background-color: white!important;
+}
+button {
+	border: 1px solid green;
+	background-color: transparent;
+	display: block;
+	margin-top: 32px!important;
+ 	width: 100%;
+ 	height: 45px;
+}

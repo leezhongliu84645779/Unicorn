@@ -4,7 +4,7 @@ var dburl = 'mongodb://localhost:27017/meanproject';
 mongoose.connect(dburl);
 
 mongoose.connection.on('connected', function() {
-	console.log("Moogose connected to" + dburl);
+	console.log("Moogose oh yeah connected to" + dburl);
 });
 
 mongoose.connection.on('disconnected', function() {
